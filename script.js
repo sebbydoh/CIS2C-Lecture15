@@ -8,8 +8,10 @@ function submitFunction(event) {
 
   event.preventDefault();
   console.log(colorInput.value);
-  if(colorInput.value != null){
+  if(savedColor != null){
       body.style.backgroundColor = savedColor;
+  } else{
+      alert("Color not selected.")
   }
   localStorage.setItem("localColor", savedColor);
   let color = localStorage.getItem("localColor");
